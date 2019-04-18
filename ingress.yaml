@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: microservice-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: ${HOST@microservices-config}
+    http:
+      paths:
+      - path: /graph/auth
+        backend:
+          serviceName: microservices-auth-graph-service
+          servicePort: ${SERVICE_PORT@microservices-auth-graph-config}
