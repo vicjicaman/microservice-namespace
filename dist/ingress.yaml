@@ -7,10 +7,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: ${HOST@microservice-config}
+  - host: www.repoflow.com
     http:
       paths:
-      - path: ${SERVICE_PATH@microservice-auth-config}/backend
+      - path: /auth/backend
         backend:
           serviceName: microservice-auth-graph-service
-          servicePort: ${SERVICE_PORT@microservice-auth-graph-config}
+          servicePort: 4000
