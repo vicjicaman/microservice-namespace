@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: microservice-ingress
+  namespace: microservices-namespace
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: www.repoflow.com
+    http:
+      paths:
+      - path: /auth/backend
+        backend:
+          serviceName: microservice-auth-graph-service
+          servicePort: 4000
