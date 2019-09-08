@@ -3,14 +3,20 @@ kind: Ingress
 metadata:
   name: microservice-ingress
   namespace: ${NAMESPACE@microservice-config}
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: ${HOST@microservice-config}
     http:
       paths:
-      - path: ${SERVICE_PATH@microservice-auth-config}/backend
+      - path: /${PATH_URL_APP@microservice-auth-config}/backend
         backend:
           serviceName: microservice-auth-graph-service
-          servicePort: ${SERVICE_PORT@microservice-auth-graph-config}
+          servicePort: ${PORT_GRAPH@microservice-auth-config}
+      - path: /${PATH_URL_APP@microservice-auth-config}/backend
+        backend:
+          serviceName: microservice-auth-graph-service
+          servicePort: ${PORT_GRAPH@microservice-auth-config}
+      - path: /${PATH_URL_APP@microservice-auth-config}
+        backend:
+          serviceName: microservice-auth-web-service
+          servicePort: ${PORT_APP@microservice-auth-config}
