@@ -10,13 +10,9 @@ spec:
       paths:
       - path: /auth/backend
         backend:
-          serviceName: microservice-auth-graph-service
-          servicePort: 4000
-      - path: /auth/backend
-        backend:
-          serviceName: microservice-auth-graph-service
+          serviceName: auth-graph-service
           servicePort: 4000
       - path: /auth
         backend:
-          serviceName: microservice-auth-web-service
+          serviceName: auth-web-service
           servicePort: 3000

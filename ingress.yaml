@@ -8,15 +8,11 @@ spec:
   - host: ${HOST@microservice-config}
     http:
       paths:
-      - path: /${PATH_URL_APP@microservice-auth-config}/backend
+      - path: ${BASE_ROUTE_BACKEND@microservice-auth-config}
         backend:
-          serviceName: microservice-auth-graph-service
-          servicePort: ${PORT_GRAPH@microservice-auth-config}
-      - path: /${PATH_URL_APP@microservice-auth-config}/backend
+          serviceName: ${SERVICE_GRAPH@microservice-auth-config}
+          servicePort: ${INTERNAL_PORT_GRAPH@microservice-auth-config}
+      - path: ${BASE_ROUTE_APP@microservice-auth-config}
         backend:
-          serviceName: microservice-auth-graph-service
-          servicePort: ${PORT_GRAPH@microservice-auth-config}
-      - path: /${PATH_URL_APP@microservice-auth-config}
-        backend:
-          serviceName: microservice-auth-web-service
-          servicePort: ${PORT_APP@microservice-auth-config}
+          serviceName: ${SERVICE_WEB@microservice-auth-config}
+          servicePort: ${INTERNAL_PORT_APP@microservice-auth-config}
