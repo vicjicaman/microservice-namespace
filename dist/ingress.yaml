@@ -5,17 +5,22 @@ metadata:
   namespace: microservices-namespace
 spec:
   rules:
-    -
-      host: www.repoflow.com
-      http:
-        paths:
-          -
-            path: /auth/backend
-            backend:
-              serviceName: auth-graph-service
-              servicePort: 4000
-          -
-            path: /auth
-            backend:
-              serviceName: auth-web-service
-              servicePort: 3000
+  - host: www.repoflow.com
+    http:
+      paths:
+      - path: /auth/backend
+        backend:
+          serviceName: auth-graph-service
+          servicePort: 4000
+      - path: /auth
+        backend:
+          serviceName: auth-web-service
+          servicePort: 3000
+      - path: /backend
+        backend:
+          serviceName: home-graph-service
+          servicePort: 4000
+      - path: /
+        backend:
+          serviceName: home-web-service
+          servicePort: 3000
