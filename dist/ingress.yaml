@@ -19,3 +19,13 @@ spec:
             backend:
               serviceName: auth-web-service
               servicePort: 3000
+          -
+            path: /backend
+            backend:
+              serviceName: home-graph-service
+              servicePort: 4000
+          -
+            path: /
+            backend:
+              serviceName: home-web-service
+              servicePort: 3000

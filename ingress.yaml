@@ -16,3 +16,11 @@ spec:
         backend:
           serviceName: ${SERVICE_WEB@microservice-auth-config}
           servicePort: ${INTERNAL_PORT_APP@microservice-auth-config}
+      - path: ${BASE_ROUTE_BACKEND@microservice-home-config}
+        backend:
+          serviceName: ${SERVICE_GRAPH@microservice-home-config}
+          servicePort: ${INTERNAL_PORT_GRAPH@microservice-home-config}
+      - path: ${BASE_ROUTE_APP@microservice-home-config}
+        backend:
+          serviceName: ${SERVICE_WEB@microservice-home-config}
+          servicePort: ${INTERNAL_PORT_APP@microservice-home-config}
