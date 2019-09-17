@@ -10,7 +10,7 @@
     },
     "microservice-home-config": {
       "url": "github.com:vicjicaman/microservice-home-config.git",
-      "version": "1.70.0-home-service-prod"
+      "version": "1.70.0-master"
     }
   }
 }
