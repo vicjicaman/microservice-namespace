@@ -11,6 +11,10 @@
     "microservice-home-config": {
       "url": "github.com:vicjicaman/microservice-home-config.git",
       "version": "1.70.0-master"
+    },
+    "microservice-blog-config": {
+      "url": "github.com:vicjicaman/microservice-blog-config.git",
+      "version": "file:./../microservice-blog-config"
     }
   }
 }
