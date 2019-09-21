@@ -6,11 +6,11 @@
     },
     "microservice-auth-config": {
       "url": "github.com:vicjicaman/microservice-auth-config.git",
-      "version": "file:./../microservice-auth-config"
+      "version": "1.70.0-auth-config-info"
     },
     "microservice-home-config": {
       "url": "github.com:vicjicaman/microservice-home-config.git",
-      "version": "file:./../microservice-home-config"
+      "version": "1.70.0-auth-config-info"
     }
   }
 }
