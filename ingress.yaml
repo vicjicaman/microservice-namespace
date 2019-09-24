@@ -8,6 +8,10 @@ spec:
   - host: ${HOST@microservice-config}
     http:
       paths:
+      - path: ${BASE_ROUTE@microservice-resources-config}
+        backend:
+          serviceName: ${SERVICE@microservice-resources-config}
+          servicePort: ${INTERNAL_PORT@microservice-resources-config}
       - path: ${BASE_ROUTE_BACKEND@microservice-auth-config}
         backend:
           serviceName: ${SERVICE_GRAPH@microservice-auth-config}
