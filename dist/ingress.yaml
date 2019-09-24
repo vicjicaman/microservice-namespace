@@ -10,6 +10,11 @@ spec:
       http:
         paths:
           -
+            path: /resources
+            backend:
+              serviceName: resources-service
+              servicePort: 4000
+          -
             path: /auth/backend
             backend:
               serviceName: auth-graph-service
