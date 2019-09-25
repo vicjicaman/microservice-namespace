@@ -25,6 +25,16 @@ spec:
               serviceName: auth-web-service
               servicePort: 3000
           -
+            path: /blog/backend
+            backend:
+              serviceName: blog-graph-service
+              servicePort: 4000
+          -
+            path: /blog
+            backend:
+              serviceName: blog-web-service
+              servicePort: 3000
+          -
             path: /backend
             backend:
               serviceName: home-graph-service
