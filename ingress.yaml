@@ -4,6 +4,10 @@ metadata:
   name: microservice-ingress
   namespace: ${NAMESPACE@microservice-config}
 spec:
+  tls:
+  - hosts:
+    - ${HOST@microservice-config}
+    secretName: certificates
   rules:
   - host: ${HOST@microservice-config}
     http:
