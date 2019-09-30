@@ -20,5 +20,15 @@
       "url": "github.com:vicjicaman/microservice-blog-config.git",
       "version": "1.70.0-master"
     }
-  }
+  },
+  "config":[
+    {
+      "name": "HOST",
+      "value": "${HOST@microservice-config}"
+    },
+    {
+      "name": "NAMESPACE",
+      "value": "${NAMESPACE@microservice-config}"
+    }
+  ]
 }

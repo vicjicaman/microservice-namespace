@@ -1,1 +1,10 @@
-{}
+{
+  "HOST": {
+    "value": "www.repoflow.com",
+    "type": null
+  },
+  "NAMESPACE": {
+    "value": "microservices-namespace",
+    "type": null
+  }
+}
