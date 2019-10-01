@@ -8,7 +8,7 @@ spec:
     -
       hosts:
         - www.repoflow.com
-      secretName: certificates
+      secretName: certificates-secret
   rules:
     -
       host: www.repoflow.com

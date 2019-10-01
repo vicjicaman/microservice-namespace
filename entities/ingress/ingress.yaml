@@ -7,7 +7,7 @@ spec:
   tls:
   - hosts:
     - ${HOST@microservice-config}
-    secretName: certificates
+    secretName: certificates-secret
   rules:
   - host: ${HOST@microservice-config}
     http:
